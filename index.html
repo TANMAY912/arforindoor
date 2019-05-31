@@ -13,13 +13,18 @@
       alert("c = 1");
       document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#arrow" scale="1 1 1" rotation="0 0 0"></a-entity>';
     }
+    if(brad==3){
+      alert("c = 3");
+      document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#right" scale="1 1 1" rotation="0 0 0"></a-entity>';
+    }
   }
   </script>
 	<a-scene embedded arjs>
 		<!-- create your content here. just a box for now -->
     <a-assets>
       <a-asset-item id="arrow" src="arrow.gltf"></a-asset-item>
-	    <a-asset-item id="exp" src="exp.gltf"></a-asset-item>
+      <a-asset-item id="exp" src="exp.gltf"></a-asset-item>
+	    <a-asset-item id="right" src="right.gltf"></a-asset-item>
     </a-assets>
 
 		<!--<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
