@@ -8,7 +8,7 @@
   var brad = url.searchParams.get("c");
   if(brad==1){
     alert("c = 1");
-    document.querySelector('#obj').gltf-model = "#arrow";
+    var x = document.getElementsByClassName("example").gltf-model = "#arrow";
   }
 </script>
 <body style='margin : 0px; overflow: hidden;'>
@@ -26,7 +26,7 @@
 <!--      <a-box position='0 0.5 0' material='color: black;'></a-box> -->
 <!--    <a-gltf-model src="arrow.gltf"></a-gltf-model> -->
 <!--    <a-gltf-model src="#arrow"></a-gltf-model> -->
-    <a-entity id = "obj" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <a-entity class="example" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 	</a-scene>
