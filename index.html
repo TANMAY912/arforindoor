@@ -12,7 +12,8 @@
 	<a-scene embedded arjs>
 		<!-- create your content here. just a box for now -->
     <a-assets>
-	     <a-asset-item id="arrow" src="exp.gltf"></a-asset-item>
+      <a-asset-item id="arrow" src="arrow.gltf"></a-asset-item>
+	    <a-asset-item id="exp" src="exp.gltf"></a-asset-item>
     </a-assets>
 
 		<!--<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
@@ -22,7 +23,15 @@
 <!--      <a-box position='0 0.5 0' material='color: black;'></a-box> -->
 <!--    <a-gltf-model src="arrow.gltf"></a-gltf-model> -->
 <!--    <a-gltf-model src="#arrow"></a-gltf-model> -->
-    <a-entity gltf-model="#arrow" scale="1 1 1" rotation="0 0 0"></a-entity>
+    <script>
+      var url_string = window.location.href; //window.location.href
+      var url = new URL(url_string);
+      var brad = url.searchParams.get("c");
+      if(c==1){
+        document.getElementById('obj').setAttribute("gltf-model","#arrow");
+      }
+    </script>
+    <a-entity id = "obj" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 	</a-scene>
