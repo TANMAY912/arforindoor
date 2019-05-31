@@ -3,10 +3,13 @@
 <!-- include ar.js for a-frame -->
 <script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
 <script>
-  var url_string = window.location.href;
+  var url_string = window.location.href; //window.location.href
   var url = new URL(url_string);
-  var dir = url.searchParams.get("d");
-//  alert(dir);
+  var brad = url.searchParams.get("c");
+  if(c==1){
+    alert("c = 1");
+    document.getElementById('obj').setAttribute("gltf-model","#arrow");
+  }
 </script>
 <body style='margin : 0px; overflow: hidden;'>
 	<a-scene embedded arjs>
@@ -28,12 +31,3 @@
     <a-entity camera></a-entity>
 	</a-scene>
 </body>
-<script>
-  var url_string = window.location.href; //window.location.href
-  var url = new URL(url_string);
-  var brad = url.searchParams.get("c");
-  if(c==1){
-    alert("c = 1");
-    document.getElementById('obj').setAttribute("gltf-model","#arrow");
-  }
-</script>
