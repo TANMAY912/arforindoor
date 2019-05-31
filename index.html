@@ -23,17 +23,17 @@
 <!--      <a-box position='0 0.5 0' material='color: black;'></a-box> -->
 <!--    <a-gltf-model src="arrow.gltf"></a-gltf-model> -->
 <!--    <a-gltf-model src="#arrow"></a-gltf-model> -->
-    <script>
-      var url_string = window.location.href; //window.location.href
-      var url = new URL(url_string);
-      var brad = url.searchParams.get("c");
-      if(c==1){
-        alert("c = 1");
-        document.getElementById('obj').setAttribute("gltf-model","#arrow");
-      }
-    </script>
     <a-entity id = "obj" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
 	</a-scene>
 </body>
+<script>
+  var url_string = window.location.href; //window.location.href
+  var url = new URL(url_string);
+  var brad = url.searchParams.get("c");
+  if(c==1){
+    alert("c = 1");
+    document.getElementById('obj').setAttribute("gltf-model","#arrow");
+  }
+</script>
