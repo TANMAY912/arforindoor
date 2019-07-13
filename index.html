@@ -27,6 +27,13 @@
     }
   }
   </script>
+  <div class="but">
+      <p>
+        <button id="capture">Capture</button>
+      </p>
+    </div>
+    <canvas id="cv" width=640 height=480></canvas>
+    <script type="text/javascript" src="camera.js"></script>
 	<a-scene embedded arjs>
 		<!-- create your content here. just a box for now -->
     <a-assets>
@@ -48,12 +55,5 @@
     <a-entity class="example" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
     </a-marker>
     <a-entity camera></a-entity>
-    <div class="but">
-      <p>
-        <button id="capture">Capture</button>
-      </p>
-    </div>
-    <canvas id="cv" width=640 height=480></canvas>
-    <script type="text/javascript" src="camera.js"></script>
 	</a-scene>
 </body>
