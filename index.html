@@ -1,52 +1,22 @@
-<!-- include aframe obviously -->
-<script src="https://aframe.io/releases/0.7.1/aframe.min.js"></script>
-<!-- include ar.js for a-frame -->
-<script src="https://jeromeetienne.github.io/AR.js/aframe/build/aframe-ar.js"></script>
-
-<body style='margin : 0px; overflow: hidden;' onload="myFunction()">
-  <script>
-  function myFunction() {
-    var url_string = window.location.href; //window.location.href
-    var url = new URL(url_string);
-    var brad = url.searchParams.get("c");
-    if(brad==1){
-//      alert("c = 1");
-      document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#backward" position="0 0 0" scale="0.7 0.7 0.7" rotation="0 0 0"></a-entity>';
-    }
-    if(brad==3){
-//      alert("c = 3");
-      document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#right" position="0 0 0" scale="0.7 0.7 0.7" rotation="0 0 0"></a-entity>';
-    }
-    if(brad==2){
-//      alert("c = 3");
-      document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#left" position="0 0 0" scale="0.7 0.7 0.7" rotation="0 0 0"></a-entity>';
-    }
-    if(brad==4){
-//      alert("c = 3");
-      document.getElementById("obj").innerHTML = '<a-entity class="example" gltf-model="#forward" position="0 0 0" scale="0.7 0.7 0.7" rotation="0 0 0"></a-entity>';
-    }
-  }
-  </script>
-	<a-scene embedded arjs = "debugUIEnabled: false; patternRatio: 0.75">
-		<!-- create your content here. just a box for now -->
-    <a-assets>
-      <a-asset-item id="arrow" src="arrow.gltf"></a-asset-item>
-      <a-asset-item id="exp" src="exp.gltf"></a-asset-item>
-      <a-asset-item id="right" src="right.gltf"></a-asset-item>
-      <a-asset-item id="left" src="left.gltf"></a-asset-item>
-      <a-asset-item id="forward" src="forward.gltf"></a-asset-item>
-	    <a-asset-item id="backward" src="backward.gltf"></a-asset-item>
-    </a-assets>
-
-		<!--<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box> -->
-		<!-- define a camera which will move according to the marker position -->
-		<a-marker preset='hiro' id = "obj">
-      <!--  scale="0.3 0.3 0.3" rotation="0 90 90"  -->
-<!--      <a-box position='0 0.5 0' material='color: black;'></a-box> -->
-<!--    <a-gltf-model src="arrow.gltf"></a-gltf-model> -->
-<!--    <a-gltf-model src="#arrow"></a-gltf-model> -->
-    <a-entity class="example" gltf-model="#exp" scale="1 1 1" rotation="0 0 0"></a-entity>
-    </a-marker>
-    <a-entity camera></a-entity>
-	</a-scene>
-</body>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Home</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  </head>
+  <body>
+    <link rel="stylesheet" type="text/css" href="camera.css">
+    <video id="vid" autoplay playsinline></video>
+    <div class="but">
+      <p>
+        <button id="capture">Capture</button>
+      </p>
+    </div>
+    <canvas id="cv" width=640 height=480></canvas>
+    <script type="text/javascript" src="camera.js"></script>
+    <!--div id="change">
+      Hey
+    </div-->
+  </body>
+</html>
