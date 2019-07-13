@@ -1,3 +1,4 @@
+console.log(video)
 const vid=document.getElementById("vid");
 const cv=document.getElementById("cv");
 const ctxt=cv.getContext('2d');
